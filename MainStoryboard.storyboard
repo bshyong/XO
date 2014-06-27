@@ -105,7 +105,13 @@
                             <outlet property="delegate" destination="Lmz-1P-uGO" id="kgy-e3-DjO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="XO" id="JYk-Ya-9WD"/>
+                    <navigationItem key="navigationItem" title="XO" id="JYk-Ya-9WD">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="XSt-hM-xxa">
+                            <connections>
+                                <action selector="logout:" destination="Lmz-1P-uGO" id="p7e-va-KHu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="XVK-JR-kQ6" kind="push" identifier="showLogin" id="3KZ-NM-eYT"/>
                     </connections>
@@ -144,6 +150,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="XVK-JR-kQ6" eventType="touchUpInside" id="HrV-Z5-OC2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-dT-XPl">
                                 <rect key="frame" x="20" y="182" width="280" height="30"/>
@@ -159,6 +168,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="XO" id="aua-qp-lxe"/>
+                    <connections>
+                        <outlet property="passwordField" destination="nVN-tn-Po5" id="hDI-Zk-cMy"/>
+                        <outlet property="usernameField" destination="9Hv-u8-FF8" id="ljh-cu-8jG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4d-xg-jqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

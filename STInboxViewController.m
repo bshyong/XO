@@ -18,9 +18,14 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+  [super viewDidLoad];
   
+  PFUser *currentUser = [PFUser currentUser];
+  if (currentUser) {
+    
+  } else {
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,5 +109,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)logout:(id)sender {
+  [PFUser logOut];
+  [self performSegueWithIdentifier:@"showLogin" sender:self];
+}
+
+// hide bottom bar on destination view controller before it is pushed onto the stack
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  if ([segue.identifier isEqualToString:@"showLogin"]) {
+    [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+  }
+}
 
 @end

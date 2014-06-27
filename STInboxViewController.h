@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface STInboxViewController : UITableViewController
+- (IBAction)logout:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "STLoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface STLoginViewController ()
 
@@ -14,19 +15,12 @@
 
 @implementation STLoginViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  self.navigationItem.hidesBackButton = YES;
+
+  // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,4 +40,35 @@
 }
 */
 
+- (IBAction)login:(id)sender {
+  
+  NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  
+  NSString *errorMessage = nil;
+
+  if([username length] == 0) {
+    errorMessage = @"Please enter a username!";
+  }
+  if ([password length] == 0) {
+    errorMessage = @"Please enter a password!";
+  }
+  
+  if(errorMessage){
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alertView show];
+    errorMessage = nil;
+  } else {
+    
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
+      if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Something went wrong" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+      } else {
+        [self.navigationController popViewControllerAnimated:YES];
+      }
+    }];
+  }
+  
+}
 @end
