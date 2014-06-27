@@ -79,7 +79,7 @@
                     <navigationItem key="navigationItem" title="Friends" id="xwX-XH-4Zr">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="oKo-1s-ra3">
                             <connections>
-                                <segue destination="TgT-zt-wiq" kind="push" id="zm6-oN-yss"/>
+                                <segue destination="TgT-zt-wiq" kind="push" identifier="showEditFriends" id="zm6-oN-yss"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

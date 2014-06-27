@@ -7,6 +7,7 @@
 //
 
 #import "STFriendsViewController.h"
+#import "STEditFriendsViewController.h"
 
 @interface STFriendsViewController ()
 
@@ -22,7 +23,7 @@
   [query orderByAscending:@"username"];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (error) {
-      NSLog(@"Error: %@ %@", error, [error userInfo])
+      NSLog(@"Error: %@ %@", error, [error userInfo]);
     } else {
       self.friends = objects;
       [self.tableView reloadData];
@@ -34,6 +35,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  if ([segue.identifier isEqualToString:@"showEditFriends"]) {
+    STEditFriendsViewController *viewController = (STEditFriendsViewController *)segue.destinationViewController;
+    viewController.friends = [NSMutableArray arrayWithArray:self.friends];
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +74,10 @@
   
     return cell;
 }
+
+
+
+
 
 
 /*

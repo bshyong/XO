@@ -64,7 +64,12 @@
     
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
-  
+    // display a checkmark if the user is a friend
+    if ([self isFriend:user]) {
+      cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+      cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
@@ -73,11 +78,25 @@
   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
-  cell.accessoryType = UITableViewCellAccessoryCheckmark;
-  PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
   PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-  [friendsRelation addObject:user];
+  PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
+  
+  if ([self isFriend:user]) {
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    // TODO fix to not use looping
+    for (PFUser *friend in self.friends) {
+      if ([friend.objectId isEqualToString:user.objectId]) {
+        [self.friends removeObject:friend];
+        break;
+      }
+    }
+    [friendsRelation removeObject:user];
+  } else {
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [self.friends addObject:user];
+    [friendsRelation addObject:user];
+  }
+
   [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
     if (error) {
       NSLog(@"Error: %@ %@",  error, [error userInfo]);
@@ -85,6 +104,19 @@
   }];
 }
 
+
+
+# pragma mark - helper methods
+// TODO this loops through all friends for each friend!
+// fix to use efficient search
+- (BOOL)isFriend:(PFUser *)user{
+  for (PFUser *friend in self.friends) {
+    if ([friend.objectId isEqualToString:user.objectId]) {
+      return YES;
+    }
+  }
+  return NO;
+}
 
 
 /*
