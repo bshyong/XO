@@ -7,6 +7,7 @@
 //
 
 #import "STSignupViewController.h"
+#import <Parse/Parse.h>
 
 @interface STSignupViewController ()
 
@@ -58,6 +59,19 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alertView show];
     errorMessage = nil;
+  } else {
+    PFUser *newUser = [PFUser user];
+    newUser.username = username;
+    newUser.password = password;
+    newUser.email = email;
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+      if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Something went wrong" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+      } else {
+        [self.navigationController popViewControllerAnimated:YES];
+      }
+    }];
   }
 
 }
