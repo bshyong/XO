@@ -255,7 +255,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="XO" id="W3F-ia-RvQ"/>
+                    <navigationItem key="navigationItem" title="XO" id="W3F-ia-RvQ">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="g9G-C8-B73"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="idn-hM-YX7" id="vhM-RR-szb"/>
                         <outlet property="passwordField" destination="eGF-Pp-Icl" id="CxO-Rv-eaM"/>

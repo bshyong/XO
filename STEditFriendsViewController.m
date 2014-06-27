@@ -18,6 +18,8 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.currentUser = [PFUser currentUser];
+
   // queries all elements in table by default
   PFQuery *query = [PFUser query];
   [query orderByAscending:@"username"];
