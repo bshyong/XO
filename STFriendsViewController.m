@@ -1,35 +1,34 @@
 //
-//  STEditFriendsViewController.m
+//  STFriendsViewController.m
 //  XO
 //
 //  Created by Benjamin Shyong on 6/27/14.
 //  Copyright (c) 2014 ShyongTech. All rights reserved.
 //
 
-#import "STEditFriendsViewController.h"
+#import "STFriendsViewController.h"
 
-@interface STEditFriendsViewController ()
+@interface STFriendsViewController ()
 
 @end
 
-@implementation STEditFriendsViewController
-
+@implementation STFriendsViewController
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  // queries all elements in table by default
-  PFQuery *query = [PFUser query];
+  self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+  PFQuery *query = [self.friendsRelation query];
   [query orderByAscending:@"username"];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (error) {
-      NSLog(@"Error: %@ %@", error, [error userInfo]);
+      NSLog(@"Error: %@ %@", error, [error userInfo])
     } else {
-      self.allUsers = objects;
+      self.friends = objects;
       [self.tableView reloadData];
     }
   }];
-  
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -54,7 +53,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.allUsers count];
+    return [self.friends count];
 }
 
 
@@ -62,29 +61,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+    PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
   
     return cell;
 }
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
-  cell.accessoryType = UITableViewCellAccessoryCheckmark;
-  PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
-  PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-  [friendsRelation addObject:user];
-  [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-    if (error) {
-      NSLog(@"Error: %@ %@",  error, [error userInfo]);
-    }
-  }];
-}
-
 
 
 /*
