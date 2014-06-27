@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="757" y="-583"/>
         </scene>
-        <!--View Controller - XO-->
+        <!--Login View Controller - XO-->
         <scene sceneID="MOi-Ey-dyt">
             <objects>
-                <viewController id="XVK-JR-kQ6" sceneMemberID="viewController">
+                <viewController id="XVK-JR-kQ6" customClass="STLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f4r-XU-OUJ"/>
                         <viewControllerLayoutGuide type="bottom" id="aDD-la-pAS"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1157" y="-583"/>
         </scene>
-        <!--View Controller - XO-->
+        <!--Signup View Controller - XO-->
         <scene sceneID="hQ3-E8-3ub">
             <objects>
-                <viewController id="e95-QH-kdJ" sceneMemberID="viewController">
+                <viewController id="e95-QH-kdJ" customClass="STSignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ush-No-dhA"/>
                         <viewControllerLayoutGuide type="bottom" id="z9Z-RI-iKy"/>
@@ -200,11 +200,19 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signup:" destination="e95-QH-kdJ" eventType="touchUpInside" id="TWW-jV-mnE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="XO" id="W3F-ia-RvQ"/>
+                    <connections>
+                        <outlet property="emailField" destination="idn-hM-YX7" id="vhM-RR-szb"/>
+                        <outlet property="passwordField" destination="eGF-Pp-Icl" id="CxO-Rv-eaM"/>
+                        <outlet property="usernameField" destination="FsM-Ab-LYa" id="8T3-me-P4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdW-4U-z8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
