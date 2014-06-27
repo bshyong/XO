@@ -39,6 +39,7 @@
 		28F26697195E004D00C29195 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F26696195E004D00C29195 /* SystemConfiguration.framework */; };
 		28F2669A195E025E00C29195 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F26699195E025E00C29195 /* STLoginViewController.m */; };
 		28F2669D195E026A00C29195 /* STSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F2669C195E026A00C29195 /* STSignupViewController.m */; };
+		28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F2669F195E227D00C29195 /* STEditFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +76,8 @@
 		28F26678195D7C3700C29195 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
 		28F26679195D7C3700C29195 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
 		28F2667A195D7C3700C29195 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
-		28F26681195D80B800C29195 /* STInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STInboxViewController.h; sourceTree = "<group>"; };
-		28F26682195D80B800C29195 /* STInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STInboxViewController.m; sourceTree = "<group>"; };
+		28F26681195D80B800C29195 /* STInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STInboxViewController.h; path = ../STInboxViewController.h; sourceTree = "<group>"; };
+		28F26682195D80B800C29195 /* STInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STInboxViewController.m; path = ../STInboxViewController.m; sourceTree = "<group>"; };
 		28F26684195DFFE400C29195 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		28F26686195E001000C29195 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		28F26688195E001600C29195 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -87,10 +88,12 @@
 		28F26692195E003F00C29195 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		28F26694195E004600C29195 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28F26696195E004D00C29195 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		28F26698195E025E00C29195 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
-		28F26699195E025E00C29195 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
-		28F2669B195E026A00C29195 /* STSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSignupViewController.h; sourceTree = "<group>"; };
-		28F2669C195E026A00C29195 /* STSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSignupViewController.m; sourceTree = "<group>"; };
+		28F26698195E025E00C29195 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STLoginViewController.h; path = ../STLoginViewController.h; sourceTree = "<group>"; };
+		28F26699195E025E00C29195 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STLoginViewController.m; path = ../STLoginViewController.m; sourceTree = "<group>"; };
+		28F2669B195E026A00C29195 /* STSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STSignupViewController.h; path = ../STSignupViewController.h; sourceTree = "<group>"; };
+		28F2669C195E026A00C29195 /* STSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STSignupViewController.m; path = ../STSignupViewController.m; sourceTree = "<group>"; };
+		28F2669E195E227D00C29195 /* STEditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STEditFriendsViewController.h; path = ../STEditFriendsViewController.h; sourceTree = "<group>"; };
+		28F2669F195E227D00C29195 /* STEditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STEditFriendsViewController.m; path = ../STEditFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,12 +135,6 @@
 			children = (
 				28F26674195D7C3700C29195 /* tab_bar_icons */,
 				28F26672195D7B5F00C29195 /* MainStoryboard.storyboard */,
-				28F26698195E025E00C29195 /* STLoginViewController.h */,
-				28F26699195E025E00C29195 /* STLoginViewController.m */,
-				28F2669B195E026A00C29195 /* STSignupViewController.h */,
-				28F2669C195E026A00C29195 /* STSignupViewController.m */,
-				28F26681195D80B800C29195 /* STInboxViewController.h */,
-				28F26682195D80B800C29195 /* STInboxViewController.m */,
 				28F26649195D7B3200C29195 /* XO */,
 				28F26662195D7B3200C29195 /* XOTests */,
 				28F26642195D7B3200C29195 /* Frameworks */,
@@ -178,6 +175,14 @@
 		28F26649195D7B3200C29195 /* XO */ = {
 			isa = PBXGroup;
 			children = (
+				28F2669E195E227D00C29195 /* STEditFriendsViewController.h */,
+				28F2669F195E227D00C29195 /* STEditFriendsViewController.m */,
+				28F26698195E025E00C29195 /* STLoginViewController.h */,
+				28F26699195E025E00C29195 /* STLoginViewController.m */,
+				28F2669B195E026A00C29195 /* STSignupViewController.h */,
+				28F2669C195E026A00C29195 /* STSignupViewController.m */,
+				28F26681195D80B800C29195 /* STInboxViewController.h */,
+				28F26682195D80B800C29195 /* STInboxViewController.m */,
 				28F26652195D7B3200C29195 /* STAppDelegate.h */,
 				28F26653195D7B3200C29195 /* STAppDelegate.m */,
 				28F26655195D7B3200C29195 /* Images.xcassets */,
@@ -332,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F2669D195E026A00C29195 /* STSignupViewController.m in Sources */,
+				28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */,
 				28F26650195D7B3200C29195 /* main.m in Sources */,
 				28F2669A195E025E00C29195 /* STLoginViewController.m in Sources */,
 				28F26683195D80B800C29195 /* STInboxViewController.m in Sources */,
