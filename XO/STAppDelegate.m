@@ -7,11 +7,16 @@
 //
 
 #import "STAppDelegate.h"
+#import <Parse/Parse.h>
+
 
 @implementation STAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"GmyprQlm3id1kRwk8t1mRJXEEATehVBggJ3U2gBI"
+                clientKey:@"0Bm0pcbNwSF3CW6wRCOunB7vUfmrgWmUW0z37zeq"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 
