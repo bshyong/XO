@@ -26,6 +26,20 @@
     self.navigationItem.title = title;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+  [super viewDidAppear:animated];
+  
+  if ([self respondsToSelector:@selector(timeOut)]) {
+   [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(timeOut) userInfo:nil repeats:NO];
+  } else {
+    NSLog(@"Selector missing");
+  }
+}
+
+-(void)timeOut{
+  [self.navigationController popViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
