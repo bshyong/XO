@@ -20,6 +20,8 @@
 {
   [super viewDidLoad];
   
+  self.moviePlayer = [[MPMoviePlayerController alloc] init];
+  
   PFUser *currentUser = [PFUser currentUser];
   if (currentUser) {
     
@@ -87,10 +89,44 @@
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     NSString *fileType = [self.selectedMessage objectForKey:@"fileType"];
     if([fileType isEqualToString:@"image"]){
+      // file type is image
       [self performSegueWithIdentifier:@"showImage" sender:self];
     } else {
+      // file type is video
+      PFFile *videoFile = [self.selectedMessage objectForKey:@"file"];
+      NSURL *fileURL = [NSURL URLWithString:videoFile.url];
+      self.moviePlayer.contentURL = fileURL;
+      [self.moviePlayer prepareToPlay];
 
+      // show thumbnail instead of black screen before playing
+      UIImage *thumbnail = [self thumbnailFromVideoAtURL:self.moviePlayer.contentURL];
+      UIImageView *imageView = [[UIImageView alloc] initWithImage:thumbnail];
+      [self.moviePlayer.backgroundView addSubview:imageView];
+      
+      // add movie player subview to current view
+      [self.view addSubview:self.moviePlayer.view];
+      [self.moviePlayer setFullscreen:YES animated:YES];
     }
+}
+
+
+- (UIImage *)thumbnailFromVideoAtURL:(NSURL *)url
+{
+  AVAsset *asset = [AVAsset assetWithURL:url];
+  
+  //  Get thumbnail at the very start of the video
+  CMTime thumbnailTime = [asset duration];
+  thumbnailTime.value = 0;
+  
+  //  Get image from the video at the given time
+  AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+  imageGenerator.appliesPreferredTrackTransform = YES;
+  
+  CGImageRef imageRef = [imageGenerator copyCGImageAtTime:thumbnailTime actualTime:NULL error:NULL];
+  UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
+  CGImageRelease(imageRef);
+  
+  return thumbnail;
 }
 
 /*

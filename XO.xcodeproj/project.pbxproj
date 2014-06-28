@@ -47,6 +47,7 @@
 		28F266B1195EC14A00C29195 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AD195EC14A00C29195 /* icon_video.png */; };
 		28F266B2195EC14A00C29195 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AE195EC14A00C29195 /* icon_video@2x.png */; };
 		28F266B5195EC84B00C29195 /* STImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F266B4195EC84B00C29195 /* STImageViewController.m */; };
+		28F266B7195F623D00C29195 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F266B6195F623D00C29195 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		28F266AE195EC14A00C29195 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 		28F266B3195EC84B00C29195 /* STImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STImageViewController.h; path = ../STImageViewController.h; sourceTree = "<group>"; };
 		28F266B4195EC84B00C29195 /* STImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STImageViewController.m; path = ../STImageViewController.m; sourceTree = "<group>"; };
+		28F266B6195F623D00C29195 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F266B7195F623D00C29195 /* MediaPlayer.framework in Frameworks */,
 				28F26697195E004D00C29195 /* SystemConfiguration.framework in Frameworks */,
 				28F26695195E004600C29195 /* StoreKit.framework in Frameworks */,
 				28F26693195E003F00C29195 /* Security.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		28F26642195D7B3200C29195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28F266B6195F623D00C29195 /* MediaPlayer.framework */,
 				28F26696195E004D00C29195 /* SystemConfiguration.framework */,
 				28F26694195E004600C29195 /* StoreKit.framework */,
 				28F26692195E003F00C29195 /* Security.framework */,

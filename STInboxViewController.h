@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface STInboxViewController : UITableViewController
 - (IBAction)logout:(id)sender;
 @property (strong, nonatomic)NSArray *messages;
 @property (strong, nonatomic)PFObject *selectedMessage;
+@property (strong, nonatomic)MPMoviePlayerController *moviePlayer;
 @end
