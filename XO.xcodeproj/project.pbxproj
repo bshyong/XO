@@ -42,6 +42,10 @@
 		28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F2669F195E227D00C29195 /* STEditFriendsViewController.m */; };
 		28F266A6195E283100C29195 /* STFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F266A5195E283100C29195 /* STFriendsViewController.m */; };
 		28F266A9195E5D2700C29195 /* STCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F266A8195E5D2700C29195 /* STCameraViewController.m */; };
+		28F266AF195EC14A00C29195 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AB195EC14A00C29195 /* icon_image.png */; };
+		28F266B0195EC14A00C29195 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AC195EC14A00C29195 /* icon_image@2x.png */; };
+		28F266B1195EC14A00C29195 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AD195EC14A00C29195 /* icon_video.png */; };
+		28F266B2195EC14A00C29195 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F266AE195EC14A00C29195 /* icon_video@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		28F266A5195E283100C29195 /* STFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STFriendsViewController.m; path = ../STFriendsViewController.m; sourceTree = "<group>"; };
 		28F266A7195E5D2700C29195 /* STCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCameraViewController.h; sourceTree = "<group>"; };
 		28F266A8195E5D2700C29195 /* STCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCameraViewController.m; sourceTree = "<group>"; };
+		28F266AB195EC14A00C29195 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		28F266AC195EC14A00C29195 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		28F266AD195EC14A00C29195 /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
+		28F266AE195EC14A00C29195 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 		28F26637195D7B3200C29195 = {
 			isa = PBXGroup;
 			children = (
+				28F266AA195EC14A00C29195 /* inbox_icons */,
 				28F26674195D7C3700C29195 /* tab_bar_icons */,
 				28F26672195D7B5F00C29195 /* MainStoryboard.storyboard */,
 				28F26649195D7B3200C29195 /* XO */,
@@ -243,6 +252,17 @@
 			path = tab_bar_icons;
 			sourceTree = "<group>";
 		};
+		28F266AA195EC14A00C29195 /* inbox_icons */ = {
+			isa = PBXGroup;
+			children = (
+				28F266AB195EC14A00C29195 /* icon_image.png */,
+				28F266AC195EC14A00C29195 /* icon_image@2x.png */,
+				28F266AD195EC14A00C29195 /* icon_video.png */,
+				28F266AE195EC14A00C29195 /* icon_video@2x.png */,
+			);
+			path = inbox_icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,15 +339,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F266B1195EC14A00C29195 /* icon_video.png in Resources */,
 				28F26673195D7B5F00C29195 /* MainStoryboard.storyboard in Resources */,
 				28F2667D195D7C3700C29195 /* friends.png in Resources */,
+				28F266AF195EC14A00C29195 /* icon_image.png in Resources */,
 				28F2667E195D7C3700C29195 /* friends@2x.png in Resources */,
 				28F2667C195D7C3700C29195 /* camera@2x.png in Resources */,
 				28F2667F195D7C3700C29195 /* inbox.png in Resources */,
 				28F2664E195D7B3200C29195 /* InfoPlist.strings in Resources */,
+				28F266B0195EC14A00C29195 /* icon_image@2x.png in Resources */,
 				28F2667B195D7C3700C29195 /* camera.png in Resources */,
 				28F26656195D7B3200C29195 /* Images.xcassets in Resources */,
 				28F26680195D7C3700C29195 /* inbox@2x.png in Resources */,
+				28F266B2195EC14A00C29195 /* icon_video@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +582,7 @@
 				28F2666E195D7B3200C29195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28F2666F195D7B3200C29195 /* Build configuration list for PBXNativeTarget "XOTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +591,7 @@
 				28F26671195D7B3200C29195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

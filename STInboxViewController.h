@@ -10,5 +10,6 @@
 
 @interface STInboxViewController : UITableViewController
 - (IBAction)logout:(id)sender;
+@property (strong, nonatomic)NSArray *messages;
 
 @end
