@@ -41,6 +41,7 @@
 		28F2669D195E026A00C29195 /* STSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F2669C195E026A00C29195 /* STSignupViewController.m */; };
 		28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F2669F195E227D00C29195 /* STEditFriendsViewController.m */; };
 		28F266A6195E283100C29195 /* STFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F266A5195E283100C29195 /* STFriendsViewController.m */; };
+		28F266A9195E5D2700C29195 /* STCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F266A8195E5D2700C29195 /* STCameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		28F2669F195E227D00C29195 /* STEditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STEditFriendsViewController.m; path = ../STEditFriendsViewController.m; sourceTree = "<group>"; };
 		28F266A4195E283100C29195 /* STFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STFriendsViewController.h; path = ../STFriendsViewController.h; sourceTree = "<group>"; };
 		28F266A5195E283100C29195 /* STFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STFriendsViewController.m; path = ../STFriendsViewController.m; sourceTree = "<group>"; };
+		28F266A7195E5D2700C29195 /* STCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCameraViewController.h; sourceTree = "<group>"; };
+		28F266A8195E5D2700C29195 /* STCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,8 @@
 				28F266A5195E283100C29195 /* STFriendsViewController.m */,
 				28F2669E195E227D00C29195 /* STEditFriendsViewController.h */,
 				28F2669F195E227D00C29195 /* STEditFriendsViewController.m */,
+				28F266A7195E5D2700C29195 /* STCameraViewController.h */,
+				28F266A8195E5D2700C29195 /* STCameraViewController.m */,
 				28F26698195E025E00C29195 /* STLoginViewController.h */,
 				28F26699195E025E00C29195 /* STLoginViewController.m */,
 				28F2669B195E026A00C29195 /* STSignupViewController.h */,
@@ -343,6 +348,7 @@
 			files = (
 				28F2669D195E026A00C29195 /* STSignupViewController.m in Sources */,
 				28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */,
+				28F266A9195E5D2700C29195 /* STCameraViewController.m in Sources */,
 				28F26650195D7B3200C29195 /* main.m in Sources */,
 				28F2669A195E025E00C29195 /* STLoginViewController.m in Sources */,
 				28F26683195D80B800C29195 /* STInboxViewController.m in Sources */,
