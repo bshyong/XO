@@ -53,7 +53,11 @@
                                 <action selector="cancelSend:" destination="cr9-9h-o9b" id="6OP-ux-UfD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="R1P-dR-lNW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="R1P-dR-lNW">
+                            <connections>
+                                <action selector="sendMessage:" destination="cr9-9h-o9b" id="Y1N-Oa-tiR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jer-DV-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
