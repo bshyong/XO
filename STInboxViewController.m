@@ -88,6 +88,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     NSString *fileType = [self.selectedMessage objectForKey:@"fileType"];
+
     if([fileType isEqualToString:@"image"]){
       // file type is image
       [self performSegueWithIdentifier:@"showImage" sender:self];
@@ -107,6 +108,16 @@
       [self.view addSubview:self.moviePlayer.view];
       [self.moviePlayer setFullscreen:YES animated:YES];
     }
+  
+  NSMutableArray *recipientIds = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"recipientIds"]];
+  if ([recipientIds count] == 1) {
+    [self.selectedMessage deleteInBackground];
+  } else {
+    [recipientIds removeObject:[[PFUser currentUser] objectId]];
+    [self.selectedMessage setObject:recipientIds forKey:@"recipientIds"];
+    [self.selectedMessage saveInBackground];
+  }
+  
 }
 
 
