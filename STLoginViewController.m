@@ -23,9 +23,6 @@
     self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
   }
   
-  self.usernameField.delegate = self;
-  self.passwordField.delegate = self;
-  
   // Do any additional setup after loading the view.
 }
 
@@ -41,14 +38,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - TextFieldDelegate methods
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-  // keyboard is dismissed when return key is pressed
-  [textField resignFirstResponder];
-  return YES;
-}
-
 
 /*
 #pragma mark - Navigation
