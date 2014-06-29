@@ -55,6 +55,24 @@
   [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navBarBackground"] forBarMetrics:UIBarMetricsDefault];
   [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+  
+  // Customize tab bar
+  [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+  
+  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+  UITabBar *tabBar = tabBarController.tabBar;
+
+  UITabBarItem *inboxTab = [tabBar.items objectAtIndex:0];
+  UITabBarItem *friendsTab = [tabBar.items objectAtIndex:1];
+  UITabBarItem *cameraTab = [tabBar.items objectAtIndex:2];
+
+  inboxTab.image = [UIImage imageNamed:@"inbox"];
+  inboxTab.selectedImage = [UIImage imageNamed:@"inbox"];
+  friendsTab.image = [UIImage imageNamed:@"friends"];
+  friendsTab.selectedImage = [UIImage imageNamed:@"friends"];
+  cameraTab.image = [UIImage imageNamed:@"camera"];
+  cameraTab.selectedImage = [UIImage imageNamed:@"camera"];
+  
 }
 
 @end
