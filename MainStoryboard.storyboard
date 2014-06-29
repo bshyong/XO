@@ -223,44 +223,46 @@
                                             <action selector="login:" destination="XVK-JR-kQ6" eventType="touchUpInside" id="HrV-Z5-OC2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-dT-XPl">
-                                        <rect key="frame" x="20" y="504" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="0GB-f2-eAb"/>
-                                            <constraint firstAttribute="height" constant="44" id="PVo-pV-brd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Don't have an account? Sign up">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="e95-QH-kdJ" kind="push" id="gas-h3-zNW"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9Hv-u8-FF8" secondAttribute="trailing" constant="20" id="4vf-aJ-csO"/>
                                     <constraint firstAttribute="trailing" secondItem="hv1-TV-cHC" secondAttribute="trailing" constant="40" id="Chn-HC-u9J"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hv1-TV-cHC" secondAttribute="bottom" constant="4" id="J0a-Bk-ODE"/>
                                     <constraint firstItem="hv1-TV-cHC" firstAttribute="top" secondItem="nVN-tn-Po5" secondAttribute="bottom" constant="8" id="J4O-He-S9t"/>
+                                    <constraint firstAttribute="bottom" secondItem="hv1-TV-cHC" secondAttribute="bottom" priority="1" constant="4" id="L4q-vh-tBf"/>
                                     <constraint firstItem="9Hv-u8-FF8" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="W4c-1F-XYG"/>
-                                    <constraint firstItem="2mS-dT-XPl" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="d2v-eT-dhW"/>
                                     <constraint firstItem="nVN-tn-Po5" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="jpX-HC-Ad6"/>
-                                    <constraint firstAttribute="bottom" secondItem="2mS-dT-XPl" secondAttribute="bottom" constant="20" id="kCT-mV-HhA"/>
-                                    <constraint firstAttribute="trailing" secondItem="2mS-dT-XPl" secondAttribute="trailing" constant="20" id="o1y-Vh-z6W"/>
                                     <constraint firstItem="nVN-tn-Po5" firstAttribute="top" secondItem="9Hv-u8-FF8" secondAttribute="bottom" constant="8" id="pIS-ot-H1m"/>
                                     <constraint firstItem="hv1-TV-cHC" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="40" id="sL6-pP-X5L"/>
                                     <constraint firstAttribute="trailing" secondItem="nVN-tn-Po5" secondAttribute="trailing" constant="20" id="vaN-0l-7Yz"/>
                                     <constraint firstAttribute="centerY" secondItem="nVN-tn-Po5" secondAttribute="centerY" id="vhl-1D-BAl"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-dT-XPl">
+                                <rect key="frame" x="20" y="504" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="0GB-f2-eAb"/>
+                                    <constraint firstAttribute="height" constant="44" id="PVo-pV-brd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Don't have an account? Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e95-QH-kdJ" kind="push" id="gas-h3-zNW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aDD-la-pAS" firstAttribute="top" secondItem="c6F-t9-HwS" secondAttribute="bottom" id="PAg-rk-ubj"/>
+                            <constraint firstItem="2mS-dT-XPl" firstAttribute="leading" secondItem="7Zk-eY-4sN" secondAttribute="leading" constant="20" id="RkW-Ln-AHJ"/>
+                            <constraint firstItem="aDD-la-pAS" firstAttribute="top" secondItem="2mS-dT-XPl" secondAttribute="bottom" constant="20" id="aQN-o0-Md0"/>
                             <constraint firstAttribute="trailing" secondItem="c6F-t9-HwS" secondAttribute="trailing" id="gre-eo-qbs"/>
                             <constraint firstItem="c6F-t9-HwS" firstAttribute="leading" secondItem="7Zk-eY-4sN" secondAttribute="leading" id="mwv-fS-Kbe"/>
+                            <constraint firstAttribute="trailing" secondItem="2mS-dT-XPl" secondAttribute="trailing" constant="20" id="u8x-G5-4so"/>
                             <constraint firstItem="c6F-t9-HwS" firstAttribute="top" secondItem="7Zk-eY-4sN" secondAttribute="top" id="vJP-1Y-F0H"/>
                         </constraints>
                     </view>
@@ -321,7 +323,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-Mr-Hrw" customClass="TPKeyboardAvoidingScrollView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-Mr-Hrw" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -380,9 +382,11 @@
                                     <constraint firstItem="bFS-Ww-G4q" firstAttribute="top" secondItem="eGF-Pp-Icl" secondAttribute="bottom" constant="8" id="5uE-cK-Wg5"/>
                                     <constraint firstItem="FsM-Ab-LYa" firstAttribute="leading" secondItem="yfw-Mr-Hrw" secondAttribute="leading" constant="20" id="6Ed-oT-frC"/>
                                     <constraint firstAttribute="trailing" secondItem="idn-hM-YX7" secondAttribute="trailing" constant="20" id="DQb-9F-r2Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="bFS-Ww-G4q" secondAttribute="bottom" priority="1" constant="4" id="Jip-vY-60I"/>
                                     <constraint firstAttribute="trailing" secondItem="eGF-Pp-Icl" secondAttribute="trailing" constant="20" id="LNM-Lu-U3C"/>
                                     <constraint firstItem="bFS-Ww-G4q" firstAttribute="leading" secondItem="yfw-Mr-Hrw" secondAttribute="leading" constant="40" id="Oac-UJ-jXg"/>
                                     <constraint firstItem="idn-hM-YX7" firstAttribute="leading" secondItem="yfw-Mr-Hrw" secondAttribute="leading" constant="20" id="Rcr-Qh-xnf"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bFS-Ww-G4q" secondAttribute="bottom" constant="4" id="TUb-Ga-xxJ"/>
                                     <constraint firstItem="eGF-Pp-Icl" firstAttribute="leading" secondItem="yfw-Mr-Hrw" secondAttribute="leading" constant="20" id="U3V-lU-ijU"/>
                                     <constraint firstAttribute="trailing" secondItem="FsM-Ab-LYa" secondAttribute="trailing" constant="20" id="ajk-JI-k1J"/>
                                     <constraint firstItem="FsM-Ab-LYa" firstAttribute="top" secondItem="idn-hM-YX7" secondAttribute="bottom" constant="8" id="cdx-Ob-GS6"/>
