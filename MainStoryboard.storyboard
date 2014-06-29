@@ -183,37 +183,53 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xei-ge-O0a">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xei-ge-O0a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hv-u8-FF8">
-                                        <rect key="frame" x="20" y="212" width="280" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hv-u8-FF8">
+                                        <rect key="frame" x="20" y="235" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7Ar-gS-6Tm"/>
+                                            <constraint firstAttribute="width" constant="280" id="cUN-h9-Kxd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVN-tn-Po5">
-                                        <rect key="frame" x="20" y="264" width="280" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVN-tn-Po5">
+                                        <rect key="frame" x="20" y="287" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="8M2-dI-reO"/>
+                                            <constraint firstAttribute="width" constant="280" id="NL2-Nb-GJ4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-TV-cHC">
-                                        <rect key="frame" x="40" y="316" width="240" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-TV-cHC">
+                                        <rect key="frame" x="40" y="339" width="240" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.37254902720451355" green="0.28627452254295349" blue="0.49411767721176147" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UuG-sN-v61"/>
+                                            <constraint firstAttribute="width" constant="240" id="Vcv-ff-gKU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="login:" destination="XVK-JR-kQ6" eventType="touchUpInside" id="HrV-Z5-OC2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-dT-XPl">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-dT-XPl">
                                         <rect key="frame" x="20" y="504" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="0GB-f2-eAb"/>
+                                            <constraint firstAttribute="height" constant="44" id="PVo-pV-brd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Don't have an account? Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,6 +240,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9Hv-u8-FF8" secondAttribute="trailing" constant="20" id="4vf-aJ-csO"/>
+                                    <constraint firstAttribute="trailing" secondItem="hv1-TV-cHC" secondAttribute="trailing" constant="40" id="Chn-HC-u9J"/>
+                                    <constraint firstItem="hv1-TV-cHC" firstAttribute="top" secondItem="nVN-tn-Po5" secondAttribute="bottom" constant="8" id="J4O-He-S9t"/>
+                                    <constraint firstItem="9Hv-u8-FF8" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="W4c-1F-XYG"/>
+                                    <constraint firstItem="2mS-dT-XPl" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="d2v-eT-dhW"/>
+                                    <constraint firstItem="nVN-tn-Po5" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="20" id="jpX-HC-Ad6"/>
+                                    <constraint firstAttribute="bottom" secondItem="2mS-dT-XPl" secondAttribute="bottom" constant="20" id="kCT-mV-HhA"/>
+                                    <constraint firstAttribute="trailing" secondItem="2mS-dT-XPl" secondAttribute="trailing" constant="20" id="o1y-Vh-z6W"/>
+                                    <constraint firstItem="nVN-tn-Po5" firstAttribute="top" secondItem="9Hv-u8-FF8" secondAttribute="bottom" constant="8" id="pIS-ot-H1m"/>
+                                    <constraint firstItem="hv1-TV-cHC" firstAttribute="leading" secondItem="xei-ge-O0a" secondAttribute="leading" constant="40" id="sL6-pP-X5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="nVN-tn-Po5" secondAttribute="trailing" constant="20" id="vaN-0l-7Yz"/>
+                                    <constraint firstAttribute="centerY" secondItem="nVN-tn-Po5" secondAttribute="centerY" id="vhl-1D-BAl"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
