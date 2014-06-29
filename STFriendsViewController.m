@@ -18,7 +18,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,7 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
   [super viewWillAppear:animated];
-
+  self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
   PFQuery *query = [self.friendsRelation query];
   [query orderByAscending:@"username"];
   

@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+
   self.recipients = [[NSMutableArray alloc] init];
   
     // Uncomment the following line to preserve selection between presentations.
@@ -31,7 +31,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-  
+    // load the friends relation each time view appears
+    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
     

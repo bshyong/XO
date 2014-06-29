@@ -18,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if ([UIScreen mainScreen].bounds.size.height == 568) {
+      self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,5 +76,10 @@
     }];
   }
 
+}
+
+- (IBAction)dismiss:(id)sender {
+  // go back to login screen if X button is pressed
+  [self.navigationController popViewControllerAnimated:YES];
 }
 @end

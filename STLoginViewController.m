@@ -18,9 +18,19 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.navigationItem.hidesBackButton = YES;
-
+  
+  if ([UIScreen mainScreen].bounds.size.height == 568) {
+    self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
+  }
+  
   // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+  // hide the nav bar
+  [self.navigationController.navigationBar setHidden:YES];
+  
 }
 
 - (void)didReceiveMemoryWarning
