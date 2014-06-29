@@ -21,12 +21,24 @@
     if ([UIScreen mainScreen].bounds.size.height == 568) {
       self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground"];
     }
+
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+    self.emailField.delegate = self;
+  
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - TextFieldDelegate methods
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+  // keyboard is dismissed when return key is pressed
+  [textField resignFirstResponder];
+  return YES;
 }
 
 /*
