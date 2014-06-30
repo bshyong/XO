@@ -66,12 +66,15 @@
   UITabBarItem *friendsTab = [tabBar.items objectAtIndex:1];
   UITabBarItem *cameraTab = [tabBar.items objectAtIndex:2];
 
-  inboxTab.image = [UIImage imageNamed:@"inbox"];
-  inboxTab.selectedImage = [UIImage imageNamed:@"inbox"];
-  friendsTab.image = [UIImage imageNamed:@"friends"];
-  friendsTab.selectedImage = [UIImage imageNamed:@"friends"];
-  cameraTab.image = [UIImage imageNamed:@"camera"];
-  cameraTab.selectedImage = [UIImage imageNamed:@"camera"];
+  UIImage *inboxImage = [[UIImage imageNamed:@"inbox"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  inboxTab.selectedImage = inboxImage;
+  inboxTab.image = inboxImage;
+  UIImage *friendsImage = [[UIImage imageNamed:@"friends"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  friendsTab.selectedImage = friendsImage;
+  friendsTab.image = friendsImage;
+  UIImage *cameraImage = [[UIImage imageNamed:@"camera"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  cameraTab.selectedImage = cameraImage;
+  cameraTab.image = cameraImage;
   
 }
 
