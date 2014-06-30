@@ -29,6 +29,10 @@
   } else {
     [self performSegueWithIdentifier:@"showLogin" sender:self];
   }
+  
+  self.refreshControl = [[UIRefreshControl alloc] init];
+  [self.refreshControl addTarget:self action:@selector(retrieveMessages) forControlEvents:UIControlEventValueChanged];
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -36,6 +40,10 @@
   // show the nav bar
   [self.navigationController.navigationBar setHidden:NO];
 
+  [self retrieveMessages];
+}
+
+- (void)retrieveMessages {
   PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
   [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
   [query orderByDescending:@"createdAt"];
@@ -46,8 +54,12 @@
       self.messages = objects;
       [self.tableView reloadData];
     }
+
+    if (self.refreshControl.isRefreshing) {
+      [self.refreshControl endRefreshing];
+    }
+
   }];
-  
 }
 
 - (void)didReceiveMemoryWarning
@@ -126,7 +138,6 @@
   }
   
 }
-
 
 - (UIImage *)thumbnailFromVideoAtURL:(NSURL *)url
 {
