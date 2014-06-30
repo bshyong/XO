@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282669E71960E4020012A12A /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 282669E41960E4020012A12A /* MSCellAccessory.m */; };
+		282669E81960E4020012A12A /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282669E61960E4020012A12A /* UIView+AccessViewController.m */; };
 		28F26644195D7B3200C29195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F26643195D7B3200C29195 /* Foundation.framework */; };
 		28F26646195D7B3200C29195 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F26645195D7B3200C29195 /* CoreGraphics.framework */; };
 		28F26648195D7B3200C29195 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F26647195D7B3200C29195 /* UIKit.framework */; };
@@ -53,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282669E31960E4020012A12A /* MSCellAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCellAccessory.h; sourceTree = "<group>"; };
+		282669E41960E4020012A12A /* MSCellAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCellAccessory.m; sourceTree = "<group>"; };
+		282669E51960E4020012A12A /* UIView+AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewController.h"; sourceTree = "<group>"; };
+		282669E61960E4020012A12A /* UIView+AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewController.m"; sourceTree = "<group>"; };
 		28F26640195D7B3200C29195 /* XO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F26643195D7B3200C29195 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28F26645195D7B3200C29195 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +142,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		282669E21960E4020012A12A /* MSCellAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				282669E31960E4020012A12A /* MSCellAccessory.h */,
+				282669E41960E4020012A12A /* MSCellAccessory.m */,
+				282669E51960E4020012A12A /* UIView+AccessViewController.h */,
+				282669E61960E4020012A12A /* UIView+AccessViewController.m */,
+			);
+			path = MSCellAccessory;
+			sourceTree = "<group>";
+		};
 		28F26637195D7B3200C29195 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +198,7 @@
 		28F26649195D7B3200C29195 /* XO */ = {
 			isa = PBXGroup;
 			children = (
+				282669E21960E4020012A12A /* MSCellAccessory */,
 				28F266D51960055300C29195 /* TPKeyboardAvoidingScrollView.h */,
 				28F266D61960057400C29195 /* TPKeyboardAvoidingScrollView.m */,
 				28F266D81960059800C29195 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
@@ -335,8 +353,10 @@
 			files = (
 				28F2669D195E026A00C29195 /* STSignupViewController.m in Sources */,
 				28F266D71960057400C29195 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				282669E81960E4020012A12A /* UIView+AccessViewController.m in Sources */,
 				28F266A0195E227D00C29195 /* STEditFriendsViewController.m in Sources */,
 				28F266A9195E5D2700C29195 /* STCameraViewController.m in Sources */,
+				282669E71960E4020012A12A /* MSCellAccessory.m in Sources */,
 				28F26650195D7B3200C29195 /* main.m in Sources */,
 				28F266DA196005BB00C29195 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				28F2669A195E025E00C29195 /* STLoginViewController.m in Sources */,
