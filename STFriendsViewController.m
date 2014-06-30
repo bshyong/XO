@@ -8,6 +8,7 @@
 
 #import "STFriendsViewController.h"
 #import "STEditFriendsViewController.h"
+#import "GravatarUrlBuilder.h"
 
 @interface STFriendsViewController ()
 
@@ -76,6 +77,22 @@
     
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
+  
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+      NSString *email = [user objectForKey:@"email"];
+      NSURL *gravatarUrl = [GravatarUrlBuilder getGravatarUrl:email];
+      NSData *imageData = [NSData dataWithContentsOfURL:gravatarUrl];
+      
+      if (imageData != nil) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+          cell.imageView.image = [UIImage imageWithData:imageData];
+          [cell setNeedsLayout];
+        });
+      }
+    });
+
+    cell.imageView.image = [UIImage imageNamed:@"icon_person"];
   
     return cell;
 }
