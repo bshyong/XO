@@ -8,6 +8,7 @@
 
 #import "STCameraViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "MSCellAccessory.h"
 
 @interface STCameraViewController ()
 
@@ -15,13 +16,15 @@
 
 @implementation STCameraViewController
 
+UIColor *disclosureColor;
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
 
   self.recipients = [[NSMutableArray alloc] init];
-  
+  disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -118,9 +121,10 @@
     cell.textLabel.text = user.username;
   
     if ([self.recipients containsObject:user.objectId]) {
-      cell.accessoryType = UITableViewCellAccessoryCheckmark;
+      UIColor *disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+      cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
     } else {
-      cell.accessoryType = UITableViewCellAccessoryNone;
+      cell.accessoryView = nil;
     }
     
     return cell;
@@ -132,11 +136,12 @@
   UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
   PFUser *user = [self.friends objectAtIndex:indexPath.row];
   
-  if (cell.accessoryType == UITableViewCellAccessoryNone) {
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+  if (cell.accessoryView == nil) {
+    UIColor *disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
     [self.recipients addObject:user.objectId];
   } else {
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.accessoryView = nil;
     [self.recipients removeObject:user.objectId];
   }
 }

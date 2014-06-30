@@ -7,6 +7,7 @@
 //
 
 #import "STEditFriendsViewController.h"
+#import "MSCellAccessory.h";
 
 @interface STEditFriendsViewController ()
 
@@ -14,6 +15,7 @@
 
 @implementation STEditFriendsViewController
 
+UIColor *disclosureColor;
 
 - (void)viewDidLoad
 {
@@ -31,6 +33,8 @@
       [self.tableView reloadData];
     }
   }];
+  
+  disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,9 +72,10 @@
     cell.textLabel.text = user.username;
     // display a checkmark if the user is a friend
     if ([self isFriend:user]) {
-      cell.accessoryType = UITableViewCellAccessoryCheckmark;
+      UIColor *disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+      cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
     } else {
-      cell.accessoryType = UITableViewCellAccessoryNone;
+      cell.accessoryView = nil;
     }
     return cell;
 }
@@ -84,7 +89,7 @@
   PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
   
   if ([self isFriend:user]) {
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.accessoryView = nil;
     // TODO fix to not use looping
     for (PFUser *friend in self.friends) {
       if ([friend.objectId isEqualToString:user.objectId]) {
@@ -94,7 +99,8 @@
     }
     [friendsRelation removeObject:user];
   } else {
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    UIColor *disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
     [self.friends addObject:user];
     [friendsRelation addObject:user];
   }
