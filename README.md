@@ -1,4 +1,4 @@
-iOS7 Snapchat application: disappearing photos and videos
+iOS7 Snapchat: disappearing photos and videos
 ==
 
 Implements
